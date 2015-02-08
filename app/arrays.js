@@ -30,7 +30,12 @@ define(function() {
     },
 
     removeWithoutCopy : function(arr, item) {
-
+        var idx = arr.indexOf(item);
+        while (idx !== -1) {
+            arr.splice(idx, 1);
+            idx = arr.indexOf(item);
+        }
+        return arr;
     },
 
     append : function(arr, item) {
