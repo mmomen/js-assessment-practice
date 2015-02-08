@@ -21,12 +21,10 @@ define(function() {
     },
 
     remove : function(arr, item) {
-        var idx = arr.indexOf(item);
-        while (idx !== -1) {
-            arr.splice(idx, 1);
-            idx = arr.indexOf(item);
-        }
-        return arr;
+        var newArr = arr.filter(function(e) {
+            return e !== item;
+        });
+        return newArr;
     },
 
     removeWithoutCopy : function(arr, item) {
