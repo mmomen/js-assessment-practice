@@ -16,11 +16,19 @@ define(function() {
     },
 
     functions : function(flag) {
-      if (flag) {
-        function getValue() { return 'a'; }
-      } else {
-        function getValue() { return 'b'; }
-      }
+      // if (flag) {
+      //   function getValue() { return 'a'; }
+      // } else {
+      //   function getValue() { return 'b'; }
+      // }
+
+      var getValue = function() {
+        if (flag) {
+          return 'a';
+        } else {
+          return 'b';
+        }
+      };
 
       return getValue();
     },
