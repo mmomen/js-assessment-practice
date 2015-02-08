@@ -3,7 +3,13 @@ if (typeof define !== 'function') { var define = require('amdefine')(module); }
 define(function() {
   return {
     indexOf : function(arr, item) {
-
+        var x = -1;
+        arr.forEach(function(e,i) {
+            if (e === item) {
+                x = i;
+            }
+        });
+        return x;
     },
 
     sum : function(arr) {
