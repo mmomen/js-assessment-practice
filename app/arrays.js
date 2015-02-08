@@ -13,7 +13,11 @@ define(function() {
     },
 
     sum : function(arr) {
-
+        var x = 0;
+        arr.forEach(function(e) {
+            x += e;
+        });
+        return x;
     },
 
     remove : function(arr, item) {
