@@ -76,7 +76,21 @@ define(function() {
     },
 
     duplicates : function(arr) {
-
+        var keys = {};
+        var duplicates = [];
+        arr.forEach(function(e) {
+            if (keys[e]) {
+                keys[e]++;
+            } else {
+                keys[e] = 1;
+            }
+        });
+        for (var key in keys) {
+            if (keys[key] > 1) {
+                duplicates.push(key);
+            }
+        }
+        return duplicates;
     },
 
     square : function(arr) {
