@@ -8,7 +8,6 @@ define(function() {
 
     alterObjects : function(constructor, greeting) {
       constructor.prototype.greeting = greeting;
-      return this;
     },
 
     iterate : function(obj) {
