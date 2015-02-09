@@ -66,7 +66,13 @@ define(function() {
     },
 
     count : function(arr, item) {
-
+        var count = 0;
+        arr.forEach(function(e) {
+            if (e === item) {
+                count++;
+            }
+        });
+        return count;
     },
 
     duplicates : function(arr) {
