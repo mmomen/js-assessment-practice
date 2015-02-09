@@ -94,7 +94,10 @@ define(function() {
     },
 
     square : function(arr) {
-
+        var squared = arr.map(function(e) {
+            return e * e;
+        });
+        return squared;
     },
 
     findAllOccurrences : function(arr, target) {
