@@ -101,7 +101,13 @@ define(function() {
     },
 
     findAllOccurrences : function(arr, target) {
-
+        var capture = [];
+        arr.forEach(function(e, i) {
+            if (target === e) {
+                capture.push(i);
+            }
+        });
+        return capture;
     }
   };
 });
